@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اختبار تحديد المسار التقني</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      direction: rtl;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: rgb(72, 166, 167);
+
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .options label {
+      display: block;
+      background: #f0f0f0;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .options label:hover {
+      background:
+rgb(154, 203, 208);
+    }
+    button {
+      background-color:rgb(154, 203, 208);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+    }
+    #result {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>وش المسار التقني اللي يناسبك؟</h1>
+    <form id="quizForm">
+
+      <!-- تم إدراج جميع الأسئلة هنا، كل سؤال مرتبط بمسار معين -->
+      <div class="question">
+        <p>1. إذا جلست تتفرج على شي غريب أو تصرف مو مفهوم، وش أول شي يخطر في بالك؟</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="ai"> أحلل وأحاول أفهم السبب</label>
+          <label><input type="radio" name="q1" value="vr"> أتخيل سيناريوهات خيالية</label>
+          <label><input type="radio" name="q1" value="data"> أفكر كيف ممكن أستفيد من المعلومة</label>
+          <label><input type="radio" name="q1" value="none"> أتجاهل الموضوع</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>2. وش أكثر شي يحمسك لو عطوك مشروع جديد؟</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="cybersecurity"> أشتغل على أمان النظام</label>
+          <label><input type="radio" name="q2" value="software"> أخطط وأوزع المهام بشكل مرتب</label>
+          <label><input type="radio" name="q2" value="dev"> أبدأ على طول أصمم واجهة التطبيق</label>
+          <label><input type="radio" name="q2" value="data"> أبحث عن البيانات اللي ممكن تساعدني</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>3. لو شفت تطبيق أو موقع شغال، وش تفكيرك؟</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="dev"> كيف صمموه؟</label>
+          <label><input type="radio" name="q3" value="cybersecurity"> كيف ممكن أهكره؟</label>
+          <label><input type="radio" name="q3" value="data"> هل فيه طريقة أحلل بياناته؟</label>
+          <label><input type="radio" name="q3" value="infra"> وش الأدوات اللي تخلّيه شغال بدون مشاكل؟</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>4. إذا أعطيتك ورقة وقلم، وش أول شي ممكن ترسم أو تخطط له؟</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="vr"> عالم كامل من تصميمي</label>
+          <label><input type="radio" name="q4" value="ai"> روبوتات أو أنظمة ذكية</label>
+          <label><input type="radio" name="q4" value="data"> بيانات وأرقام لها معنى</label>
+          <label><input type="radio" name="q4" value="infra"> شبكات وأجهزة مربوطة ببعض</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>5. وش طريقتك في الشغل؟</p>
+        <div class="options">
+          <label><input type="radio" name="q5" value="software"> لازم أخطط قبل أبدأ</label>
+          <label><input type="radio" name="q5" value="dev"> أحب أجرب وأتعلم وأنا أشتغل</label>
+          <label><input type="radio" name="q5" value="ai"> أحب أتابع التفاصيل الصغيرة</label>
+          <label><input type="radio" name="q5" value="data"> أهم شي أشتغل بروحي بدون إزعاج</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>6. تحب الشغل اللي فيه:</p>
+        <div class="options">
+          <label><input type="radio" name="q6" value="cybersecurity"> حماية ومراقبة</label>
+          <label><input type="radio" name="q6" value="vr"> خيال وتصميم</label>
+          <label><input type="radio" name="q6" value="data"> تحليلات وتفكير منطقي</label>
+          <label><input type="radio" name="q6" value="infra"> هيكلة وبناء أنظمة</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>7. لو قلت لك فيه خلل تقني... وش ردة فعلك؟</p>
+        <div class="options">
+          <label><input type="radio" name="q7" value="data"> أدور السبب وأحلله</label>
+          <label><input type="radio" name="q7" value="cybersecurity"> أشوف إذا أحد اخترق النظام</label>
+          <label><input type="radio" name="q7" value="infra"> أراجع طريقة التوصيل والهيكلة</label>
+          <label><input type="radio" name="q7" value="software"> أعيد برمجة الشي من جديد</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>8. لو عندك وقت فراغ، وش ممكن تسوي؟</p>
+        <div class="options">
+          <label><input type="radio" name="q8" value="vr"> أصمم لعبة أو عالم افتراضي</label>
+          <label><input type="radio" name="q8" value="dev"> أجرب أطور تطبيق بسيط</label>
+          <label><input type="radio" name="q8" value="ai"> أشوف كورسات أو أقرأ عن الذكاء الاصطناعي</label>
+          <label><input type="radio" name="q8" value="data"> أحلل بيانات من تويتر أو يوتيوب</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>9. وش نوع التحدي اللي تحس إنك تقدر تتعامل معه؟</p>
+        <div class="options">
+          <label><input type="radio" name="q9" value="cybersecurity"> فك شفرات أو تهكير</label>
+          <label><input type="radio" name="q9" value="software"> إصلاح أخطاء برمجية</label>
+          <label><input type="radio" name="q9" value="infra"> بناء شبكات مستقرة</label>
+          <label><input type="radio" name="q9" value="data"> تحليل كم هائل من البيانات</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>10. تحب تتعامل أكثر مع:</p>
+        <div class="options">
+          <label><input type="radio" name="q10" value="dev"> المستخدمين وواجهات التطبيقات</label>
+          <label><input type="radio" name="q10" value="infra"> الأنظمة الداخلية والبنية الأساسية</label>
+          <label><input type="radio" name="q10" value="software"> الأكواد والخطط الطويلة</label>
+          <label><input type="radio" name="q10" value="ai"> الأجهزة والبيانات الذكية</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="getResult()">اعرض النتيجة</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function getResult() {
+      const answers = document.querySelectorAll('input[type=radio]:checked');
+      const totalQuestions = document.querySelectorAll('.question').length;
+      const scores = {
+        ai: 0,
+        vr: 0,
+        cybersecurity: 0,
+        data: 0,
+        infra: 0,
+        dev: 0,
+        software: 0
+      };
+
+      answers.forEach(answer => {
+        if (scores.hasOwnProperty(answer.value)) {
+          scores[answer.value]++;
+        }
+      });
+
+      if (answers.length < totalQuestions) {
+        document.getElementById('result').textContent = '⚠️ لازم تجاوب على كل الأسئلة قبل ما نعرض النتيجة';
+        return;
+      }
+
+      const maxScore = Math.max(...Object.values(scores));
+      const topChoices = Object.entries(scores).filter(([_, value]) => value === maxScore);
+
+      let resultText = '';
+      if (topChoices.length === 1) {
+        resultText = '✅ المسار التقني المناسب لك هو: ' + interpretResult(topChoices[0][0]);
+      } else if (topChoices.length === 2) {
+        resultText = '🔍 واضح إن عندك ميول مشتركة بين هالمجالين:\n';
+        topChoices.forEach(choice => {
+          resultText += '- ' + interpretResult(choice[0]) + '\n';
+        });
+      } else {
+        resultText = '❌ فيه تعارض كبير بالإجابات، حاول تعيد الاختبار وتكون أكثر دقة في اختيارك';
+      }
+
+      document.getElementById('result').textContent = resultText;
+    }
+
+    function interpretResult(field) {
+      switch(field) {
+        case 'ai': return 'الذكاء الاصطناعي 👩🏻‍💻';
+        case 'vr': return 'العوالم الافتراضية 🕶️';
+        case 'cybersecurity': return 'الأمن السيبراني 🔐';
+        case 'data': return 'تحليل البيانات 📊';
+        case 'infra': return 'البنية التحتية 🖥️';
+        case 'dev': return 'تطوير التطبيقات 📱';
+        case 'software': return 'هندسة البرمجيات 🛠️';
+        default: return 'مسار غير معروف';
+      }
+    }
+  </script>
+</body>
+</html>

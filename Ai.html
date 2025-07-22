@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- خاص بالخط نوعه -->
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+
+<!--اللي يطلع فوق عنوان الصفحه -->
+    <title>مسبار </title>
+<style>
+
+    body {
+            margin: 0;
+font-family: "Playfair Display", serif;
+        }
+    .header{
+        background-color:rgb(241, 242, 237);
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+       padding: 10px 50px; 
+      
+     }
+
+    /* تنسيق المحتوى العام */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+  font-family: 'Tajawal', sans-serif;
+  color: rgb(226, 218, 214);
+  line-height: 1.6;
+}
+
+/* كل قسم (مجال) في كارد */
+.section {
+  background-color:/* rgb(223, 242, 235);*/
+ rgb(214, 230, 242);
+
+  border-radius: 12px;
+  box-shadow: rgb(122, 178, 211);
+
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* تأثير هوفر للكارد */
+.section:hover {
+  box-shadow: 0 6px 20px rgb(122, 178, 211); 
+}
+
+/* عناوين الأقسام */
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: /*rgb(74, 98, 138); */rgb(0, 72, 138);
+
+  margin-bottom: 12px;
+}
+
+/* العناوين الفرعية */
+.section h3 {
+  font-size: 20px;
+  color: 
+
+ rgb(0, 72, 138);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* الفقرات */
+.section p {
+  font-size: 16px;
+  color: 
+rgb(0, 72, 138);
+  margin-bottom: 18px;
+}
+
+/* القوائم */
+.section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  color: 
+rgb(0, 72, 138);
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+
+
+/* روابط الهيدر */
+ .header{
+        background-color: rgb(242, 239, 231);
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+       padding: 10px 50px; 
+      
+     }
+     .header-image img{
+        border-radius: 20px;
+       width: 150px;
+    
+
+     }
+
+/*rgb(241, 242, 237);
+rgb(215, 224, 179);
+rgb(234, 234, 214);*/
+    .logo{
+width: 100px;
+    }
+       .header-links a{
+        color: rgb(40, 109, 158);
+        padding: 5px 15px;
+        text-decoration: none;
+      border-radius: 15px;
+
+
+       }
+       .header-links a:hover {
+          
+background-color:rgb(133, 215, 216);
+       }
+       
+ .Design-pic {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.de-text {
+  flex: 1 1 55%;
+}
+
+.de-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.de-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+</style>
+
+</head>
+
+<body dir="rtl">
+    <!--header -->
+   <div class="header ">
+
+<div class="header-image">
+    <img class="logo" src="imges/MIS.png" width="1000" >
+     
+   </div>
+
+<div class="header-links ">
+<div class="header-links a"> 
+<a href="index.html">الرئيسة</a>
+<a href="contact.html">الاستفسارات</a>
+ 
+    </div>
+
+</div>
+   </div>
+
+ <div class="content">
+
+    <section class="section">
+      
+  <div class="Design-pic">
+    <div class="de-text">
+      <h2> الذكاء الاصطناعي (AI)</h2>
+      <p><strong>وش هو؟</strong><br />
+      الذكاء الاصطناعي هو لما تخلّي الأجهزة والبرامج "تفكر" وتتعلّم زي البشر. مثلًا: تتكلم مع روبوت ويرد عليك، أو موقع يتوقع وش تحب تشوف.</p>
+      <p><strong>وش يسوّون فيه؟</strong><br />
+      يشتغلون على تدريب الآلة، تحليل البيانات، بناء أنظمة تتعلم وتتطور، مثل الشات بوتات والتوصيات الذكية.</p>
+ </div>
+
+ <div class="de-image">
+      <img src="imges/Future-of-AI.jpg" alt="هندسة البرمجيات">
+    </div>
+  </div>
+
+      <h3>خطة البداية:</h3>
+      <ul>
+        <li>تعلّم لغة Python</li>
+        <li>خذ كورسات أساسيات الذكاء الاصطناعي (مثل من كورسيرا أو Doroob)</li>
+        <li>تعلم المكتبات مثل: TensorFlow، Scikit-learn</li>
+        <li>جرب تسوي مشاريع بسيطة (توقع درجات، تصنيف صور...)</li>
+        <li>شارك في تحديات AI مثل Kaggle</li>
+      </ul>
+
+
+<hr style="border: 1px solid rgb(56, 139, 174);">
+
+  <h2>مصادر قوية لتعلم الذكاء الاصطناعي</h2>
+ 
+    <h3>دورات مجانية وقوية:</h3>
+    <ul>
+      <li><strong>AI for Everyone – Andrew Ng (كورسيرا)</strong><br>
+      <a href="https://www.coursera.org/learn/ai-for-everyone?utm_medium=sem&utm_source=gg&utm_campaign=b2c_emea_x_multi_ftcof_career-academy_cx_dr_bau_gg_pmax_gc_s2_en_m_hyb_23-12_x&campaignid=20882109092&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&creativeid=&assetgroupid=6485735763&targetid=&extensionid=&placement=&gad_source=1&gad_campaignid=20875558740&gbraid=0AAAAADdKX6YPeoDRgPqkCxL0HecPL67AM&gclid=Cj0KCQjwyvfDBhDYARIsAItzbZGvA27naRJ8CPGt3OX7TnFW5VRSel3vfpWFBCUrpLqFcb3E8cjqn44aAtDbEALw_wcB">رابط الدورة</a><br>
+      مناسبة جدًا للمبتدئين لفهم مفاهيم الذكاء الاصطناعي واستخدامه في الأعمال.</li>
+
+      <li><strong>Machine Learning – Andrew Ng (أشهر دورة على الإطلاق)</strong><br>
+      <a href="https://www.coursera.org/specializations/machine-learning-introduction?utm_medium=sem&utm_source=gg&utm_campaign=b2c_emea_x_multi_ftcof_career-academy_cx_dr_bau_gg_pmax_gc_s2_en_m_hyb_23-12_x&campaignid=20882109092&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&creativeid=&assetgroupid=6566749494&targetid=&extensionid=&placement=&gad_source=1&gad_campaignid=20875558740&gbraid=0AAAAADdKX6YPeoDRgPqkCxL0HecPL67AM&gclid=Cj0KCQjwyvfDBhDYARIsAItzbZH3w43_-c4Jp117Vip-WAANQ8kdCIwaC_9oIBhJtP2jTasC1fo8vXIaAhKDEALw_wcB">رابط الدورة</a><br>
+      تشرح الخوارزميات بلغة بسيطة وتستخدم لغة Octave/Matlab.</li>
+
+      <li><strong>Intro to Artificial Intelligence – Udacity (مقدمة من Google)</strong><br>
+      <a href="https://www.udacity.com/course/intro-to-artificial-intelligence--cs271">رابط الدورة</a></li>
+
+      <li><strong>DeepLearning.AI Specialization – Coursera</strong><br>
+      <a href="https://www.coursera.org/specializations/deep-learning">رابط الدورة</a><br>
+      دورة متقدمة مكونة من 5 مستويات.</li>
+    </ul>
+
+    <h3> كتب ممتازة لتعلم الذكاء الاصطناعي:</h3>
+    <ul>
+      <li><strong>Artificial Intelligence: A Modern Approach – Stuart Russell</strong><br>
+      يُعتبر المرجع الأكاديمي رقم 1 في الذكاء الاصطناعي.</li>
+
+      <li><strong>Deep Learning – Ian Goodfellow</strong><br>
+      للمتقدمين، يغطي الشبكات العصبية والتعلم العميق.</li>
+
+      <li><strong>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow – Aurélien Géron</strong><br>
+      عملي جدًا، ويعلمك من خلال المشاريع الحقيقية.</li>
+    </ul>
+
+    <h3> مواقع وأدوات تعليمية قوية:</h3>
+    <ul>
+      <li><strong>Kaggle</strong><br>
+      <a href="https://www.kaggle.com">kaggle.com</a><br>
+      أكبر منصة للتدريب العملي في علوم البيانات والذكاء الاصطناعي + مسابقات حقيقية.</li>
+
+      <li><strong>Google AI</strong><br>
+      <a href="https://ai.google">ai.google</a><br>
+      مصادر، مقالات، أدوات، ومشاريع مفتوحة المصدر من Google.</li>
+
+      <li><strong>Fast.ai</strong><br>
+      <a href="https://www.fast.ai">fast.ai</a><br>
+      دورات مجانية متقدمة وعملية جدًا مع مجتمع ضخم.</li>
+
+      <li><strong>OpenAI Learning Resources</strong><br>
+      <a href="https://openai.com/learn">openai.com/learn</a><br>
+      مقالات وأدلة متقدمة عن الذكاء الاصطناعي وتطبيقات GPT.</li>
+    </ul>
+
+    <h3> أدوات تساعدك تطبق وتتعلم أسرع:</h3>
+    <ul>
+      <li><strong>Google Colab</strong><br>
+      بيئة برمجية مجانية للعمل على مشاريع AI باستخدام Python.</li>
+
+      <li><strong>TensorFlow</strong><br>
+      مكتبة قوية من Google لبناء نماذج الذكاء الاصطناعي.</li>
+
+      <li><strong>PyTorch</strong><br>
+      بديل لـ TensorFlow مدعوم من Meta (فيسبوك) ويُستخدم كثيرًا في الأبحاث.</li>
+    </ul>
+
+    <h3>خطة مقترحة لك:</h3>
+    <ol style="background-color: rgb(168, 204, 233); color:white;" >
+      <li>ابدأ بدورة "AI for Everyone" لفهم الأساسيات.</li>
+      <li>تعلمي Python إذا ما عندك خلفية.</li>
+      <li>خذ دورة "Machine Learning – Andrew Ng".</li>
+      <li>ابدأ بتطبيق مشاريع بسيطة على Kaggle.</li>
+      <li>خذي دورات من Fast.ai أو DeepLearning.AI.</li>
+      <li>اشتغلي على مشروع تطبقي فيه التعلم العميق (Deep Learning).</li>
+      
+    </ol>
+  </div>
+</section>
+
+</body>
