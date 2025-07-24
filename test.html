@@ -193,7 +193,7 @@ rgb(154, 203, 208);
       });
 
       if (answers.length < totalQuestions) {
-        document.getElementById('result').textContent = '⚠️ لازم تجاوب على كل الأسئلة قبل ما نعرض النتيجة';
+        document.getElementById('result').textContent = ' لازم تجاوب على كل الأسئلة قبل ما نعرض النتيجة';
         return;
       }
 
@@ -202,14 +202,14 @@ rgb(154, 203, 208);
 
       let resultText = '';
       if (topChoices.length === 1) {
-        resultText = '✅ المسار التقني المناسب لك هو: ' + interpretResult(topChoices[0][0]);
+        resultText = ' المسار التقني المناسب لك هو: ' + interpretResult(topChoices[0][0]);
       } else if (topChoices.length === 2) {
-        resultText = '🔍 واضح إن عندك ميول مشتركة بين هالمجالين:\n';
+        resultText = ' واضح إن عندك ميول مشتركة بين هالمجالين:\n';
         topChoices.forEach(choice => {
           resultText += '- ' + interpretResult(choice[0]) + '\n';
         });
       } else {
-        resultText = '❌ فيه تعارض كبير بالإجابات، حاول تعيد الاختبار وتكون أكثر دقة في اختيارك';
+        resultText = ' فيه تعارض كبير بالإجابات، حاول تعيد الاختبار وتكون أكثر دقة في اختيارك';
       }
 
       document.getElementById('result').textContent = resultText;
@@ -217,13 +217,13 @@ rgb(154, 203, 208);
 
     function interpretResult(field) {
       switch(field) {
-        case 'ai': return 'الذكاء الاصطناعي 👩🏻‍💻';
-        case 'vr': return 'العوالم الافتراضية 🕶️';
-        case 'cybersecurity': return 'الأمن السيبراني 🔐';
-        case 'data': return 'تحليل البيانات 📊';
-        case 'infra': return 'البنية التحتية 🖥️';
-        case 'dev': return 'تطوير التطبيقات 📱';
-        case 'software': return 'هندسة البرمجيات 🛠️';
+        case 'ai': return 'الذكاء الاصطناعي ';
+        case 'vr': return 'العوالم الافتراضية ';
+        case 'cybersecurity': return 'الأمن السيبراني ';
+        case 'data': return 'تحليل البيانات ';
+        case 'infra': return 'البنية التحتية ';
+        case 'dev': return 'تطوير التطبيقات ';
+        case 'software': return 'هندسة البرمجيات ';
         default: return 'مسار غير معروف';
       }
     }
