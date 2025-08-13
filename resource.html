@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المحتويات العلمية - ملخصات وعروض</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      background-color: rgb(242, 239, 231);
+      padding: 20px;
+    }
+
+    .header {
+      background-color: rgb(242, 239, 231);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      gap: 20px;
+    }
+
+    .header-image img {
+      width: 150px;
+      border-radius: 20px;
+    }
+
+    .header-links a {
+      margin-left: 15px;
+      padding: 5px 15px;
+      color: rgb(40, 109, 158);
+      text-decoration: none;
+      border-radius: 15px;
+      font-weight: bold;
+    }
+
+    .header-links a:hover {
+      background-color: rgb(133, 215, 216);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: rgb(199, 217, 221);
+      border-radius: 20px;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .title {
+      font-weight: bold;
+      color: rgb(51, 51, 113);
+    }
+
+    .desc {
+      color: #333;
+      font-size: 14px;
+    }
+
+    .btn {
+      color: white;
+      background-color: rgb(0, 106, 113);
+      border: none;
+      padding: 8px 15px;
+      border-radius: 15px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: rgb(77, 177, 179);
+    }
+  </style>
+</head>
+
+  <body dir="rtl">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-image">
+      <img class="logo" src="imges/MIS.png" alt="Logo" />
+    </div>
+    <div class="header-links">
+      <a href="index.html">الرئيسة</a>
+      <a href="contact.html">الاستفسارات</a>
+    </div>
+  </div>
+
+  <!-- Filter Buttons فوق المحتوى -->
+  <div style="margin: 20px 0; text-align: center;">
+    <button class="btn" onclick="filterByType('all')">الكل</button>
+    <button class="btn" onclick="filterByType('presentation')">عروض</button>
+    <button class="btn" onclick="filterByType('summary')">ملخصات</button>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section id="list" class="grid"></section>
+  </main>
+
+
+  <script>
+    const resources = [
+      // عروض
+      {type:'presentation', title:'LinkedList', desc:'عرض عن LinkedList', pdf:'https://github.com/Leen2025/bootcamp-resources/blob/main/LinkedList.pdf?raw=true'},
+      {type:'presentation', title:'Python - Classes and Objects', desc:'عرض عن الكلاسات والكائنات في Python', pdf:'https://github.com/Leen2025/bootcamp-resources/blob/main/Python-Classes%20and%20Objects.pdf?raw=true'},
+      {type:'presentation', title:'If Else Loops Functions Python', desc:'شرح التحكم والدوال والتكرار في Python', pdf:'https://github.com/Leen2025/bootcamp-resources/blob/main/if%20else%20loops%20functions%20python.pdf?raw=true'},
+      {type:'presentation', title:'C - More malloc, free - task0', desc:'شرح malloc و free في C', pdf:'https://github.com/Leen2025/bootcamp-resources/blob/main/C-%20More%20malloc,%20free%20-%20task0.pdf?raw=true'},
+      {type:'presentation', title:'Binary Trees', desc:'شرح Binary Trees', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/binary-trees.pdf?raw=true'},
+      {type:'presentation', title:'Input Output Python', desc:'شرح إدخال وإخراج البيانات في Python', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/input%20output%20python.pdf?raw=true'},
+
+      // ملخصات
+      {type:'summary', title:'Binary Trees and Sorting algorithms & Big O', desc:'ملخص هياكل بيانات وخوارزميات', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/Binary%20Trees%20and%20%20Sorting%20algorithms%20%26%20Big%20O%203.pdf'},
+      {type:'summary', title:'C - More functions, more nested loops', desc:'ملخص C loops and functions', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/C%20-%20More%20functions%2C%20more%20nested%20loops.pdf'},
+      {type:'summary', title:'C - More pointers, arrays and strings', desc:'ملخص C pointers', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/C%20-%20More%20pointers%2C%20arrays%20and%20strings%20(2).pdf'},
+      {type:'summary', title:'C - Simple Shell', desc:'ملخص مشروع simple shell', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/C-Simple%20Shell%202.pdf'},
+      {type:'summary', title:'HTML-CSS-JAVASCRIPT', desc:'ملخص تصميم الويب', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/HTML-CSS-JAVASCRIPT-LeenAlsaleh%20(2).pdf'},
+      {type:'summary', title:'Pagination', desc:'ملخص تقسيم الصفحات', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/Pagination%20.pdf'},
+      {type:'summary', title:'Python - Variable Annotation', desc:'ملخص بايثون', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/Python-Variable%20Annotation%202.pdf'},
+      {type:'summary', title:'Python - Class and objects', desc:'ملخص OOP', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/Python-class%20and%20objects%202.pdf'},
+      {type:'summary', title:'SQL - Introduction', desc:'ملخص SQL', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/SQL-Introduction%20.pdf'},
+      {type:'summary', title:'UML PROJECT', desc:'ملخص UML', pdf:'https://github.com/Leen2025/bootcamp-resources/raw/main/summary/UML%20PROJECT%20%202.pdf'}
+    ];
+
+    function createCard(item){
+      return `<div class="card">
+        <h3 class="title">${item.title}</h3>
+        <p class="desc">${item.desc}</p>
+        <a class="btn" target="_blank" href="${item.pdf}">عرض</a>
+      </div>`;
+    }
+
+    function renderList(data){
+      document.getElementById('list').innerHTML = data.map(createCard).join('');
+    }
+
+    function filterByType(type){
+      if(type === 'all'){
+        renderList(resources);
+      } else {
+        renderList(resources.filter(r => r.type === type));
+      }
+    }
+
+    renderList(resources);
+  </script>
+</body>
+</html>
